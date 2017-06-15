@@ -1,3 +1,5 @@
+import numpy
+import math
 # The words ”A point (a vector) is given” mean that its coordinates (components) are given.
 # The words ”A line is given” mean that its equation is given. You can use as an input either equation of the line in some form or its initial point and direction vector.
 # The words ”A plane is given” mean that its general equation is given. You can use as an input either this equation or the vector of coefficients.
