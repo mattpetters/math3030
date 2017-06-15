@@ -37,7 +37,11 @@ public class Line {
         double xValue = ((point.getX() - initialPoint.getX() )/ directionVector.getI());
         double yValue = ( (point.getY() - initialPoint.getY() )/ directionVector.getJ());
         double zValue = ( (point.getZ() - initialPoint.getZ() )/ directionVector.getK());
-        return false;
+        if (xValue != yValue) || (xValue != zValue) || (yValue != zValue) {
+           return false;  
+        } else {
+         return true;
+        }
       }
 
 }
