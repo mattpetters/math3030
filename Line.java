@@ -33,4 +33,11 @@ public class Line {
         return directionVector;
       }
 
+      public boolean containsPoint(Point point) {
+        double xValue = ((point.getX() - initialPoint.getX() )/ directionVector.getI());
+        double yValue = ( (point.getY() - initialPoint.getY() )/ directionVector.getJ());
+        double zValue = ( (point.getZ() - initialPoint.getZ() )/ directionVector.getK());
+        return false;
+      }
+
 }
