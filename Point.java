@@ -39,4 +39,15 @@ public class Point {
   public double getZ() {
     return z;
   }
+
+  public Vector findVectorTo(Point p) {
+    return new Vector(p.getX() - this.x,
+                      p.getY() - this.y,
+                      p.getZ() - this.z
+    );
+  }
+
+  public String toString() {
+    return "(" + x + ", " + y + ", " + z + ")";
+  }
 }

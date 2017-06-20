@@ -19,5 +19,21 @@ public class Plane {
 		initialPoint = p;
 	}
 
+	public void setNormalVector(Vector v) {
+		normalVector = v;
+	}
 
+	public Point getInitialPoint() {
+		return initialPoint;
+	}
+
+	public Vector getNormalVector() {
+		return normalVector;
+	}
+
+	public String toString() {
+		return 	normalVector.getI() + "(x - " + initialPoint.getX() + ") + " +
+						normalVector.getJ() + "(y - " + initialPoint.getY() + ") + " +
+						normalVector.getK() + "(x - " + initialPoint.getZ() + ") = 0";
+	}
 }
