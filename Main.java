@@ -3,7 +3,28 @@ import java.io.*;
 
 class Main {
     public static void main(String[] args) {
-      Point point = new Point(Double.parseDouble(args[0]),
+      Scanner kb = new Scanner(System.in);
+
+      System.out.println("Input Point Coordinates : ");
+      double x = kb.nextDouble();
+      double y = kb.nextDouble();
+      double z = kb.nextDouble();
+      Point point = new Point(x, y, z);
+
+      System.out.println("Input Line Initial Point Coordinates :");
+      x = kb.nextDouble();
+      y = kb.nextDouble();
+      z = kb.nextDouble();
+      Point initPt = new Point(x, y, z);
+
+      System.out.println("Input Line Direction Vector :");
+      x = kb.nextDouble();
+      y = kb.nextDouble();
+      z = kb.nextDouble();
+      
+      Vector dirVec = new Vector(x, y, z);
+
+      /*Point point = new Point(Double.parseDouble(args[0]),
                               Double.parseDouble(args[1]),
                               Double.parseDouble(args[2])
       );
@@ -15,7 +36,7 @@ class Main {
       Vector dirVec = new Vector( Double.parseDouble(args[6]),
                                   Double.parseDouble(args[7]),
                                   Double.parseDouble(args[8])
-      );
+      );*/
       Line line = new Line(initPt, dirVec);
 
       if (line.containsPoint(point)) {
