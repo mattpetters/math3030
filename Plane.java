@@ -40,8 +40,38 @@ public class Plane {
 
 	// Returns a String with the formula of the Plane in its standard form
 	public String toString() {
-		return 	normalVector.getI() + "(x - " + initialPoint.getX() + ") + " +
-						normalVector.getJ() + "(y - " + initialPoint.getY() + ") + " +
-						normalVector.getK() + "(x - " + initialPoint.getZ() + ") = 0";
+		String output = "";
+
+		output = output + normalVector.getI() + "(x";
+		if (initialPoint.getX() >= 0) {
+			output = output + " - " + initialPoint.getX() + ")";
+		} else {
+			output = output + " + " + -initialPoint.getX() + ")";
+		}
+
+		if (normalVector.getJ() >= 0) {
+			output = output + " + " + normalVector.getJ() + "(y";
+		} else {
+			output = output + " - " + -normalVector.getJ() + "(y";
+		}
+
+		if (initialPoint.getY() >= 0) {
+			output = output + " - " + initialPoint.getY() + ")";
+		} else {
+			output = output + " + " + -initialPoint.getY() + ")";
+		}
+
+		if (normalVector.getK() >= 0) {
+			output = output + " + " + normalVector.getK() + "(z";
+		} else {
+			output = output + " - " + -normalVector.getK() + "(z";
+		}
+
+		if (initialPoint.getZ() >= 0) {
+			output = output + " - " + initialPoint.getZ() + ") = 0";
+		} else {
+			output = output + " + " + -initialPoint.getZ() + ") = 0";
+		}
+		return output;
 	}
 }

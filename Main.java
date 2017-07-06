@@ -5,23 +5,31 @@ class Main {
     public static void main(String[] args) {
       Scanner kb = new Scanner(System.in);
 
-      System.out.println("Input Point Coordinates : ");
+      System.out.print("Input Point P Coordinates :\nx = ");
       double x = kb.nextDouble();
+      System.out.print("y = ");
       double y = kb.nextDouble();
+      System.out.print("z = ");
       double z = kb.nextDouble();
+      System.out.println("");
       Point point = new Point(x, y, z);
 
-      System.out.println("Input Line Initial Point Coordinates :");
+      System.out.print("Input Line l Initial Point Coordinates :\nx = ");
       x = kb.nextDouble();
+      System.out.print("y = ");
       y = kb.nextDouble();
+      System.out.print("z = ");
       z = kb.nextDouble();
+      System.out.println("");
       Point initPt = new Point(x, y, z);
 
-      System.out.println("Input Line Direction Vector :");
+      System.out.print("Input Line l Direction Vector :\na = ");
       x = kb.nextDouble();
+      System.out.print("b = ");
       y = kb.nextDouble();
+      System.out.print("c = ");
       z = kb.nextDouble();
-      
+      System.out.println("");
       Vector dirVec = new Vector(x, y, z);
 
       /*Point point = new Point(Double.parseDouble(args[0]),
@@ -64,7 +72,7 @@ class Main {
 
         Line perpLine = line.findPerpLineContPoint(point);
         System.out.println( "(4) Line perpendicular to line l containing " +
-                            "point P :\n" + perpLine + "\n");
+                            "point P :\n" + perpLine);
       }
     }
 }

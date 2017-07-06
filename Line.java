@@ -86,8 +86,28 @@ public class Line {
 
       // Returns a String with the formula of the Line in its parametric form
       public String toString() {
-        return  "x = " + initialPoint.getX() + " + " + directionVector.getI() + "t\n" +
-                "y = " + initialPoint.getY() + " + " + directionVector.getJ() + "t\n" +
-                "z = " + initialPoint.getZ() + " + " + directionVector.getK() + "t";
+        String output = "";
+
+        output = output + "x = " + initialPoint.getX();
+        if (directionVector.getI() >= 0) {
+          output =  output + " + " + directionVector.getI() + "t\n";
+        } else {
+          output =  output + " - " + -directionVector.getI() + "t\n";
+        }
+
+        output = output + "y = " + initialPoint.getY();
+        if (directionVector.getJ() >= 0) {
+          output =  output + " + " + directionVector.getJ() + "t\n";
+        } else {
+          output =  output + " - " + -directionVector.getJ() + "t\n";
+        }
+
+        output = output + "z = " + initialPoint.getZ();
+        if (directionVector.getK() >= 0) {
+          output =  output + " + " + directionVector.getK() + "t";
+        } else {
+          output =  output + " - " + -directionVector.getK() + "t";
+        }
+        return output;
       }
 }
